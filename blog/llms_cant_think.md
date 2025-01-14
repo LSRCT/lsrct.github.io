@@ -36,14 +36,13 @@ Chain of thought (CoT) prompting is one of the techniques to make LLMs “think�
 Instead of just outputting the solution or answer, the LLM outputs a thought process as well. This does generate better results, which is quite amazing. There are multiple similar techniques, some more sophisticated, like tree of thought and many more. They all work in a similar way as chain of thought.
 
 Let’s for example say we have a simple question, here’s what the answer might be without chain of thought.
-Q: How many Rs are there in strawberry?
-A: There are two Rs in the word strawberry.
+
+![image](./blog_llms_cant_think-strawberry.drawio.svg)
 
 Now a possible chain of thought output:
-Q: How many Rs are there in strawberry? Think step-by-step.
-A: To count the Rs in strawberry, we count the Rs in the word “straw” and add the number of Rs in “”berry.
-    The word “straw” has 1 R. The word “berry” has 2 Rs. In conclusion, the word “strawberry” has 3 Rs.
-[Insert Flowchart Here] 
+
+![image](./blog_llms_cant_think-CoT.drawio.svg)
+
 While this is a simple example it shows how laying out the process avoids mistakes.
 This, however does not really solve the problem completely. Users have very little control over how hard the model should think. Additionally, imagine the LLM is starting to solve a problem and makes a mistake. There is no way for it to go back and fix that. It will continue and step-by-step get to the wrong solution. CoT is certainly an improvement, but it does not solve the underlying problem with LLMs.
 
@@ -53,9 +52,8 @@ Even with newer methods like chain-of-thought prompting, AIs still often produce
 
 That often works and I get the answer I’m looking for. So how could we automate that? This is where verification comes in.
 One way to improve is to build a more static, non-LLM system around the LLM. This can be as simple as the following program:
-1. Let LLM try to solve the problem.
-2. Put result in a verifier. -> If the result is correct, break here. -> If the result is wrong, go back to step 1.
-[Insert Flowchart Here] 
+
+![image](./blog_llms_cant_think-verifier.drawio.svg)
 
 With this simple program, the LLM can try again and again until it eventually comes up with the correct solution. When wrong, it’s reasonable to give some hint that the previous solution was tried and wrong, but that can be in a condensed form, enough to make the LLM not try the same thing again but no more than that. This is exactly what we already do manually when ChatGPT is wrong.
 
