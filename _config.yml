@@ -3,4 +3,4 @@ logo: an_fax.jpg
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 title: Alex Netsch
-
+google_analytics: G-KVPDW3SG27
