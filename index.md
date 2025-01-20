@@ -29,7 +29,7 @@ My work history:
 - Used ML to analyze EEG data.
 
 #### 🔥 Student Research Assistant - Fraunhofer IPM
-- Built measurement devices for harsh environments.
+- Built sensor systems for harsh environments.
 
 Feel free to message me for a more detailed CV.
 
