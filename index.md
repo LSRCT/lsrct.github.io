@@ -2,15 +2,16 @@
 layout: default
 ---
 
-## Hi!
+# Hi!
 I love building tech products, working with excellent teams and giving cool ideas the hype they deserve.
 Feel free to reach out if you want to talk about tech, AI or startups!
 
-
-## Blog
+* * *
+# Blog
 [LLMs can't think (yet)](./blog/llms_cant_think.md).
 
-## What I do
+* * *
+# What I do
 I'm passionate about tech since before I wrote my first computer programm at about 12 years ago. Since then my journey led me to electrical engineering, machine learning, computer vision, LLMs and becoming a startup founder.
 
 I'd like to work with you if you have a great, tech heavy, product and need a strong communicator to not only help develop the product, but promote value it provides.
@@ -32,7 +33,8 @@ My work history:
 
 Feel free to message me for a more detailed CV.
 
-## Technical Expertise
+* * *
+# Technical Expertise
 - AI/ML Frameworks: PyTorch, HuggingFace, TensorFlow
 - Languages: Python, C++, JS/TS, .Net
 - Tools: Docker, Kubernetes, Git
