@@ -31,3 +31,8 @@ My work history:
 - Built measurement devices for harsh environments
 
 Feel free to message me for a more detailed CV.
+
+## Technical Expertise
+- AI/ML Frameworks: PyTorch, HuggingFace, TensorFlow
+- Languages: Python, C++, JS/TS, .Net
+- Tools: Docker, Kubernetes, Git
