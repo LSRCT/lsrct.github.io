@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## About Me
+## Hi!
 I love building tech products, working with excellent teams and giving cool ideas the hype they deserve.
 Programming and tech has been my passion for more than 10 years.
 
