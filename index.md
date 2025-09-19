@@ -38,3 +38,7 @@ Feel free to message me for a more detailed CV.
 - AI/ML Frameworks: PyTorch, HuggingFace, TensorFlow
 - Languages: Python, C++, JS/TS, .Net
 - Tools: Docker, Kubernetes, Git
+
+* * *
+# Demos
+- [VK CORS CSRF PoC](./attack.html)

